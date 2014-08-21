@@ -1,0 +1,1 @@
+# Naive earthquake notifier for Iceland.
