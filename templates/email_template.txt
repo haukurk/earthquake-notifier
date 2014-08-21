@@ -1,0 +1,9 @@
+Hi, {{ name }}
+
+I just detected a earthquake of the size {{ quakesize }}!
+
+Location: {{ location }}
+Longitude: {{ longitute }}
+Latitude: {{ latitute }}
+Depth: {{ depth }}
+Quality: {{ quality }}
