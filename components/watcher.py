@@ -1,5 +1,6 @@
 from components.events import Event
 
+
 class QuakeWatcher:
     """
     Watcher for quakes (for modules)

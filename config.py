@@ -1,6 +1,6 @@
 # Web service poller settings
 DELAY_BETWEEN_CHECKS = 30 # Seconds.
-QUAKE_SIZE_THRESHOLD = 3.0
+QUAKE_SIZE_THRESHOLD = 0.1
 
 # Email settings
 EMAIL_SENDER="quake@hauxi.is"
