@@ -44,10 +44,10 @@ while True:
     for entry in data["results"]:
         entry_time = parser.parse(entry["timestamp"])
         if latest < entry_time:
-			latest = entry_time
+            latest = entry_time
             if evals.eval_quake(entry) is not None:
                 logger.info("[Quake Threshold Reached]: " + str(entry))
-                quakewatcher.quakeOccured(entry)  # Let components know.
+                quakewatcher.quakeOccured(entry)  # Let components know
             else:
                 logger.info("[Quake Detected - Threshold higher than size]")
     time.sleep(config.DELAY_BETWEEN_CHECKS)
