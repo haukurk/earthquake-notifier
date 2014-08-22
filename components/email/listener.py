@@ -5,7 +5,7 @@ from jinja2 import Environment, PackageLoader
 import config
 
 # Template environment Jinja2
-env = Environment(loader=PackageLoader('email', 'templates/'))
+env = Environment(loader=PackageLoader('components', 'templates'))
 
 '''
 Send rating email with a given jinja2 tempalte and kwargs.
@@ -54,5 +54,8 @@ def proccessEvent(data):
     """
 
     for rec in config.EMAIL_RECIPENTS:
-        send_email(rec["email"], "template.htm", "template.txt", "Earthquake Detected",
-                   **{"data": data, "name": rec["name"]})
+        try:
+            send_email(rec["email"], "template.html", "template.txt", "Earthquake Detected",
+                       **{"data": data, "name": rec["name"]})
+        except Exception as e:
+            logger.error("Error sending mail to " + str(rec["email"]) + ". Stack: " + e.message)

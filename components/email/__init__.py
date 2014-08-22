@@ -1,1 +1,1 @@
-import listener
+from components.email import listener

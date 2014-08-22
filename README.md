@@ -21,5 +21,5 @@ To run it the *easy* way you simply run it in background and ignore the hangup s
 ```
 nohup python main.py &
 ```
-I though would recommend you using ```supervisord``` or similar solutions.
+I though would recommend you using ```supervisord``` (https://github.com/Supervisor/supervisor) or similar solutions.
 

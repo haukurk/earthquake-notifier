@@ -1,14 +1,17 @@
 import json
+import time
+from datetime import datetime
+
 import requests
 from dateutil import parser
 import pytz
-import time
+
 import config
-from datetime import datetime
 from utils.logger import logger
 from components.watcher import QuakeWatcher
 from components.email import listener as emailListener
 from common import evals
+
 
 print "Starting Quake Notifier..."
 logger.info("Quake notify poller started!")
@@ -28,7 +31,7 @@ def get_measurements():
 
 # process the quake and send notification to components.
 def process_quake(quake_entry):
-    print "Test Event"
+    print "[INFO] quakeEvent Fired."
 
 # Quake Watcher - Trigger events to components.
 quakewatcher = QuakeWatcher()
