@@ -31,7 +31,7 @@ def get_measurements():
 
 # process the quake and send notification to components.
 def process_quake(quake_entry):
-    print "[INFO] quakeEvent Fired."
+    print "[Quake Detected - Size over threshold] Notified all components.."
 
 # Quake Watcher - Trigger events to components.
 quakewatcher = QuakeWatcher()
