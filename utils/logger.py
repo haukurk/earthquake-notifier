@@ -1,7 +1,7 @@
 import logging
 
 # Setup Logging
-logging.basicConfig(level=logging.WARNING)
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("EarthquakeNotify")
 
 # create a file handler
