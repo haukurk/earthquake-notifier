@@ -49,5 +49,5 @@ while True:
                 logger.info("[Quake Threshold Reached]: " + str(entry))
                 quakewatcher.quakeOccured(entry)  # Let components know
             else:
-                logger.info("[Quake Detected - Threshold higher than size]")
+                logger.info("[Quake Detected - Threshold higher than size ("+str(entry["size"])+")]")
     time.sleep(config.DELAY_BETWEEN_CHECKS)
