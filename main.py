@@ -40,14 +40,24 @@ quakewatcher.quakeEvent += emailListener.proccessEvent  # Send Event To Email Co
 
 # Loop infinitely.
 while True:
-    data = get_measurements()
-    for entry in data["results"]:
-        entry_time = parser.parse(entry["timestamp"])
-        if latest < entry_time:
-            latest = entry_time
-            if evals.eval_quake(entry) is not None:
-                logger.info("[Quake Threshold Reached]: " + str(entry))
-                quakewatcher.quakeOccured(entry)  # Let components know
-            else:
-                logger.info("[Quake Detected - Threshold higher than size ("+str(entry["size"])+")]")
+    try:
+        data = get_measurements()
+        for entry in data["results"]:
+            entry_time = parser.parse(entry["timestamp"])
+            if latest < entry_time:
+                latest = entry_time
+                if evals.eval_quake(entry) is not None:
+                    logger.info("[Quake Threshold Reached]: " + str(entry))
+                    quakewatcher.quakeOccured(entry)  # Let components know
+                else:
+                    logger.info("[Quake Detected - Threshold higher than size ("+str(entry["size"])+")]")
+    # Handle Connection Exception
+    except requests.ConnectionError, e:
+        logger.error('EXCEPTION: ConnectionError: ', e)
+        continue
+    except:
+        logger.error('EXCEPTION: UNKNOWN Error')
+        continue
+
+    # Idle between tries.
     time.sleep(config.DELAY_BETWEEN_CHECKS)
