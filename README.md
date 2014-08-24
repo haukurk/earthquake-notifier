@@ -19,7 +19,7 @@ pip install -r requirements.txt
 # Run
 To run it the *easy* way you simply run it in background and ignore the hangup signal:
 ```
-nohup python main.py &
+nohup python quakenotify.py &
 ```
 I though would recommend you using ```supervisord``` (https://github.com/Supervisor/supervisor) or similar solutions.
 

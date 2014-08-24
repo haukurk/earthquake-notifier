@@ -35,8 +35,8 @@ def process_quake(quake_entry):
 
 # Quake Watcher - Trigger events to components.
 quakewatcher = QuakeWatcher()
-quakewatcher.quakeEvent += process_quake  # Test Event To stdout.
-quakewatcher.quakeEvent += emailListener.proccessEvent  # Send Event To Email Component
+quakewatcher.quakeEvent += process_quake  # Stdout component
+quakewatcher.quakeEvent += emailListener.proccessEvent  # Email Component
 
 # Loop infinitely.
 while True:
