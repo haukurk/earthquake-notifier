@@ -1,5 +1,7 @@
 # Earthquake Notifier for Iceland.
 Earthquake notifier uses the APIS public API (https://github.com/kristjanmik/apis/tree/master/endpoints/earthquake).
+UPDATE: Currently created a new web service that parses www.vedur.is. It's more accurate then currently live on apis.is.
+It's located on http://public.hauxi.is/earthquake/is/sec.
 
 The current version has the following notification components:
 * Email Notification

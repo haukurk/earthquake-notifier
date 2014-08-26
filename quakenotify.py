@@ -21,7 +21,8 @@ latest = datetime.now(pytz.utc)
 print "Skipping quakes that occurred after: " + str(latest)
 
 # parse from apis.is
-url = 'http://apis.is/earthquake/is'
+#url = 'http://apis.is/earthquake/is'
+url = 'http://public.hauxi.is/earthquake/is/sec'  # testing out my own webservice with same specs
 
 
 # get measurements from apis function.
