@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/haukurk/earthquake-notifier.svg)](https://travis-ci.org/haukurk/earthquake-notifier)
+
 # Earthquake Notifier for Iceland.
 Earthquake notifier uses the APIS public API (https://github.com/kristjanmik/apis/tree/master/endpoints/earthquake).
 UPDATE: Currently created a new web service that parses www.vedur.is. It's more accurate then currently live on apis.is.
