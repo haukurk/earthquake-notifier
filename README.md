@@ -24,6 +24,7 @@ The configure file ```config.py``` keeps all configurable parameters for the app
 # Web service poller settings
 DELAY_BETWEEN_CHECKS = 30  # Seconds.
 QUAKE_SIZE_THRESHOLD = 3.0 # Richter magnitude scale.
+SCANOLDQUAKES_DAYS = 1  # Do not ignore old quakes on startup (DAYS)
 
 # Email settings
 EMAIL_SENDER = "quake@yourdomain.com"
