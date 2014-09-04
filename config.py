@@ -11,8 +11,8 @@ EMAIL_SENDER = "quake@hauxi.is"
 EMAIL_DEBUG = False
 EMAIL_SMTP_SERVER = "smtp.samskip.is"
 EMAIL_RECIPENTS = [
-    {"name": "Haukur", "email": "haukur@hauxi.is"}#,
-  #  {"name": "Darri", "email": "darri.helgason@samskip.com"},
-   # {"name": "Trausti", "email": "trausti.jonsson@samskip.com"},
-    #{"name": "Arnar Jons", "email": "arnar@arnarjons.is"}
+    {"name": "Haukur", "email": "haukur@hauxi.is"},
+    {"name": "Darri", "email": "darri.helgason@samskip.com"},
+    {"name": "Trausti", "email": "trausti.jonsson@samskip.com"},
+    {"name": "Arnar Jons", "email": "arnar@arnarjons.is"}
 ]
