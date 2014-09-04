@@ -3,3 +3,4 @@ requests
 marrow.mailer
 jinja2
 python-dateutil
+nose
